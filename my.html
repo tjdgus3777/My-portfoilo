@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+       
+ $(window).scroll(function(){
+    sc=$(window).scrollTop();
+    $("#sc_text").text(sc) 
+    $("#bg1").css({'top':(sc*0.2)-250})
+    $("#bg2").css({'top':(sc*0.5)-250})
+    $("#bg3").css({'top':(sc*0.8)-250})
+    $("#img1").css({'bottom':(sc*0.8)-250})
+    $("#img2").css({'bottom':(sc*0.5)-250})
+    $("#img3").css({'bottom':(sc*0.2)-250})
+
+
+    $("#text1").css({'left':(sc*0.5)-3000})
+    $("#text2").css({'right':(sc*0.5)-3000})
+    $("#text3").css({'left':(sc*0.5)-3000})
+    $("#text4").css({'right':(sc*0.5)-3000})
+
+ })
+
+})  
+
+    
+ 
+</script>
+    <style>
+        *{ margin: 0; list-style: none; padding: 0;}
+        body{ height: 10000px; background-color: #000;}
+        #sc_text{ position: fixed; left: 0; top: 0; font-size: 100px; color: red;}
+        img{width: 200px; height: 200px; border-radius: 200px; border: 4px solid #000; position: fixed;  margin: auto; }
+        #bg1 { left: -500px;  right: 0; top: -400px;}
+        #bg2 {left: 0;  right: 0; top: -400px; }
+        #bg3 {left: 500px; right: 0; top: -400px;}
+        #img1 {left: -500px;  right: 0; bottom: -400px; }
+        #img2 {left: 0px;  right: 0; bottom: -400px; }
+        #img3 {left: 500px;  right: 0; bottom: -400px; }
+
+        h2 { position: fixed; font-size: 140px;  width: 3500px;}
+        #text1{ left: -3000px; top: 0; color: deeppink;  text-align: left;}
+        #text2{ right: -3000px; top: 200px; color: deepskyblue; text-align: right;}
+        #text3{ left: -3000px; top: 400px; color: deeppink; text-align: left;}
+        #text4{ right: -3200px; top: 600px; color: deepskyblue; text-align: right; font-size: 100px; letter-spacing: -2px;}
+    </style>
+</head>
+<body>
+    <img src="me1.jpg" alt="" id="bg1">
+    <img src="me2.jpg" alt="" id="bg2">
+    <img src="me3.jpg" alt="" id="bg3">
+
+    <h1 id="sc_text">0</h1>
+    <img src="me4.jpg" alt="" id="img1">
+    <img src="me5.jpg" alt="" id="img2">
+    <img src="me6.jpg" alt="" id="img3">
+    <h2 id="text1">Hello! My Portfolio</h2>
+    <h2 id="text2">Web publisher 조성현</h2>
+    <h2 id="text3">UI / UX designer  </h2>
+    <h2 id="text4">이 사이트는 상업용이 아닌 개인 
+        <br>포트폴리오 용도로 제작되었습니다.</h2>
+
+</body>
+</html>
